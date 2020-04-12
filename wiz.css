@@ -98,6 +98,20 @@ section {
   margin-bottom: 60px;
 }
 
+.doc-stats dt {
+  font-size: 30px;
+  width: auto;
+  min-width: 80px;
+
+}
+
+.doc-stats dd {
+  display: block;
+  margin-left: 80px;
+  padding-left: 10px;
+  padding-top: 15px;
+}
+
 .entities {
   list-style: none;
   padding: 0;
