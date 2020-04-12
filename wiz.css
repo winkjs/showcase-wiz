@@ -1,3 +1,4 @@
+/* Edit Surface */
 .surface-container {
   background: #282C34;
   padding-top: 50px;
@@ -31,6 +32,7 @@
   outline: none;
 }
 
+/* Tags in Surface */
 span.tag {
   position: relative;
   display: inline-block;
@@ -90,3 +92,43 @@ span.verb::after {
   opacity: 0.3;
   border-color: #282C34;
 }
+
+/* Other Information */
+section {
+  margin-bottom: 60px;
+}
+
+.entities {
+  list-style: none;
+  padding: 0;
+}
+
+.entities li {
+  display: inline-block;
+  font-family: monospace;
+  background: gray;
+  color: white;
+  border-radius: 2px;
+  padding: 1px;
+  padding-right: 8px;
+  margin: 4px;
+}
+
+.entities li::before{
+  content: 'tag';
+  color: gray;
+  background: white;
+  border-radius: 1px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  margin-right: 8px;
+}
+
+.entities li.person { background-color: #00af89; }
+.entities li.person::before { content: 'person'; color: #00af89; }
+
+.entities li.org { background-color: #36c; }
+.entities li.org::before { content: 'org'; color: #36c; }
+
+.entities li.location { background-color: #d33; }
+.entities li.location::before { content: 'location'; color: #d33; }
