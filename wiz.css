@@ -98,6 +98,10 @@ section {
   margin-bottom: 60px;
 }
 
+.sentence-text {
+  width: 100%;
+}
+
 .doc-stats dt {
   font-size: 30px;
   width: auto;

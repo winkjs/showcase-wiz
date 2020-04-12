@@ -69,17 +69,19 @@
                 <th>Sentence</th>
                 <th>Score</th>
               </tr>
-              <tr>
-                <td>😊</td>
-                <td>I am so happy</td>
-                <td>4</td>
-              </tr>
+              <tbody id="sentiment-table">
+                <tr>
+                  <td>😊</td>
+                  <td class="sentence-text">I am so happy</td>
+                  <td>4</td>
+                </tr>
+              </tbody>
             </table>
           </div>
           <div class="col-md-4">
             <section>
               <h2>Entities</h2>
-              <ul class="entities">
+              <ul class="entities" id="entities">
                 <li class="person">Sanjaya</li>
                 <li class="org">Wink</li>
                 <li class="location">Noida</li>
@@ -89,28 +91,30 @@
             <section>
               <h2>Document Statistics</h2>
               <dl class="dl-horizontal doc-stats">
-                <dt>3</dt>
+                <dt id="sentences-stat">3</dt>
                 <dd>Sentences</dd>
 
-                <dt>44</dt>
+                <dt id="words-stat">44</dt>
                 <dd>Words</dd>
 
-                <dt>128</dt>
+                <dt id="tokens-stat">128</dt>
                 <dd>Tokens</dd>
               </dl>
             </section>
 
             <section>
               <h2>Word frequency</h2>
-              <table class="table table-striped">
+              <table class="table">
                 <tr>
                   <th>Word</th>
                   <th>Frequency</th>
                 </tr>
-                <tr>
-                  <td>Test</td>
-                  <td>42</td>
-                </tr>
+                <tbody id="word-freq">
+                  <tr>
+                    <td>Test</td>
+                    <td>42</td>
+                  </tr>
+                </tbody>
               </table>
             </section>
           </div>
