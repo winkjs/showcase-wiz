@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 renderInfo = function (info) {
+  console.log(info);
   var output = document.getElementById('output');
   var entities = document.getElementById('entities');
   var wordFreq = document.getElementById('word-freq');
@@ -29,7 +30,7 @@ renderInfo = function (info) {
   // Entitiy list
   entities.innerHTML = '';
   info.entities.forEach( function (e) {
-    entities.innerHTML += '<li class="' + e.type + '">' + e.entity + '</li>';
+    entities.innerHTML += '<li class="' + e.type + '">' + e.value + '</li>';
   } );
 
   // Document info
@@ -58,14 +59,25 @@ renderInfo = function (info) {
 }
 
 getSentimentEmoji = function (s) {
-  if( s === -2 ) return '😢';
-  if( s === -1 ) return '☹️';
+  if( s > 1 ) return '😃';
+  if( s > 0 ) return '😊';
+  if( s < -1 ) return '😢';
+  if( s < 0 ) return '☹️';
   if( s === 0 ) return '😶';
-  if( s === 1 ) return '😊';
-  if( s === 2 ) return '😃';
+
+
 }
 
 getInfo = function (v) {
+  fetch('http://showcase-serverless.herokuapp.com/pos-tagger?sentence='+v)
+    .then(function (res) {
+      return res.json();
+    }).then(function (info) {
+      renderInfo(info);
+    })
+
+
+  return;
   // TODO: This is a mock function and should be replaced by an API call
   var info = {
     taggedText: tag(v),

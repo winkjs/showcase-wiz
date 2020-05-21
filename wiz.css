@@ -38,6 +38,7 @@ span.tag {
   display: inline-block;
   padding: 0;
   margin: 0;
+  color: #AAB1BE;
 }
 
 span.tag::after {
@@ -50,14 +51,16 @@ span.tag::after {
   margin: 0;
   width: 100%;
   border-top: 2px solid #fff;
+  color: #4E535C;
+  border-color: #282C34;
 }
 
-span.org {
+span.DATE {
   color: #36c;
 }
 
-span.org::after {
-  content: 'org';
+span.DATE::after {
+  content: 'date';
   color: #36c;
   border-color: #36c;
 }
@@ -82,16 +85,13 @@ span.location::after {
   border-color: #d33;
 }
 
-span.verb {
-  color: #AAB1BE;
-}
-
-span.verb::after {
-  content: 'verb';
-  color: #AAB1BE;
-  opacity: 0.3;
-  border-color: #282C34;
-}
+span.VERB::after { content: 'verb'; }
+span.PRON::after { content: 'pron'; }
+span.AUX::after { content: 'aux'; }
+span.CCONJ::after { content: 'cconj'; }
+span.NOUN::after { content: 'noun'; }
+span.ADP::after { content: 'adp'; }
+span.ADV::after { content: 'adv'; }
 
 /* Other Information */
 section {
