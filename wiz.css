@@ -55,43 +55,68 @@ span.tag::after {
   border-color: #282C34;
 }
 
-span.DATE {
-  color: #36c;
-}
+/* Numbers are green */
+span.MONEY { color: #00af89; }
+span.MONEY::after { content: 'date'; color: #00af89; border-color: #00af89; }
 
-span.DATE::after {
-  content: 'date';
-  color: #36c;
-  border-color: #36c;
-}
+span.ORDINAL { color: #00af89; }
+span.ORDINAL::after { content: 'ordinal'; color: #00af89; border-color: #00af89; }
 
-span.person {
-  color: #00af89;
-}
+span.CARDINAL { color: #00af89; }
+span.CARDINAL::after { content: 'cardinal'; color: #00af89; border-color: #00af89; }
 
-span.person::after {
-  content: 'person';
-  color: #00af89;
-  border-color: #00af89;
-}
+span.PERCENT { color: #00af89; }
+span.PERCENT::after { content: 'percent'; color: #00af89; border-color: #00af89; }
 
-span.location {
-  color: #d33;
-}
+/* Time is purple */
+span.DATE { color: #5c2a9d; }
+span.DATE::after { content: 'date'; color: #5c2a9d; border-color: #5c2a9d; }
 
-span.location::after {
-  content: 'location';
-  color: #d33;
-  border-color: #d33;
-}
+span.TIME { color: #5c2a9d; }
+span.TIMe::after { content: 'time'; color: #5c2a9d; border-color: #5c2a9d; }
 
-span.VERB::after { content: 'verb'; }
-span.PRON::after { content: 'pron'; }
-span.AUX::after { content: 'aux'; }
-span.CCONJ::after { content: 'cconj'; }
-span.NOUN::after { content: 'noun'; }
+span.DURATION { color: #5c2a9d; }
+span.DURATION::after { content: 'duration'; color: #5c2a9d; border-color: #5c2a9d; }
+
+/* URLs are blue */
+span.URL { color: #36c; }
+span.URL::after { content: 'URL'; color: #36c; border-color: #36c; }
+
+span.MENTION { color: #36c; }
+span.MENTION::after { content: 'mention'; color: #36c; border-color: #36c; }
+
+span.HASHTAG { color: #36c; }
+span.HASHTAG::after { content: 'hashtag'; color: #36c; border-color: #36c; }
+
+span.EMAIL { color: #36c; }
+span.EMAIL::after { content: 'email'; color: #36c; border-color: #36c; }
+
+/* Emojis are yellow */
+span.EMOJI { color: #fc3; }
+span.EMOJI::after { content: 'emoji'; color: #fc3; border-color: #fc3; }
+
+span.EMOTICON { color: #fc3; }
+span.EMOTICON::after { content: 'emoticon'; color: #fc3; border-color: #fc3; }
+
+
+span.ADJ::after { content: 'adj'; }
 span.ADP::after { content: 'adp'; }
 span.ADV::after { content: 'adv'; }
+span.AUX::after { content: 'aux'; }
+span.CCONJ::after { content: 'cconj'; }
+span.DET::after { content: 'det'; }
+span.INTJ::after { content: 'intj'; }
+span.NOUN::after { content: 'noun'; }
+span.NUM::after { content: 'num'; }
+span.PART::after { content: 'part'; }
+span.PRON::after { content: 'pron'; }
+span.PROPN::after { content: 'propn'; }
+span.PUNCT::after { content: 'punct'; }
+span.SPACE::after { content: 'space'; }
+span.SYM::after { content: 'sym'; }
+span.VERB::after { content: 'verb'; }
+span.X::after { content: 'x'; }
+span.SCONJ::after { content: 'sconj'; }
 
 /* Other Information */
 section {
@@ -142,11 +167,48 @@ section {
   margin-right: 8px;
 }
 
-.entities li.person { background-color: #00af89; }
-.entities li.person::before { content: 'person'; color: #00af89; }
+/* Numbers are green */
+.entities li.MONEY { background-color: #00af89; }
+.entities li.MONEY::before { content: 'money'; color: #00af89; }
 
-.entities li.org { background-color: #36c; }
-.entities li.org::before { content: 'org'; color: #36c; }
+.entities li.ORDINAL { background-color: #00af89; }
+.entities li.ORDINAL::before { content: 'ordinal'; color: #00af89; }
+
+.entities li.CARDINAL { background-color: #00af89; }
+.entities li.CARDINAL::before { content: 'cardinal'; color: #00af89; }
+
+.entities li.PERCENT { background-color: #00af89; }
+.entities li.PERCENT::before { content: 'percent'; color: #00af89; }
+
+/* Time is purple */
+.entities li.DURATION { background-color: #5c2a9d; }
+.entities li.DURATION::before { content: 'duration'; color: #5c2a9d; }
+
+.entities li.TIME { background-color: #5c2a9d; }
+.entities li.TIME::before { content: 'time'; color: #5c2a9d; }
+
+.entities li.DATE { background-color: #5c2a9d; }
+.entities li.DATE::before { content: 'date'; color: #5c2a9d; }
+
+/* URLs are blue */
+.entities li.URL { background-color: #36c; }
+.entities li.URL::before { content: 'url'; color: #36c; }
+
+.entities li.MENTION { background-color: #36c; }
+.entities li.MENTION::before { content: 'mention'; color: #36c; }
+
+.entities li.HASHTAG { background-color: #36c; }
+.entities li.HASHTAG::before { content: 'hashtag'; color: #36c; }
+
+.entities li.EMAIL { background-color: #36c; }
+.entities li.EMAIL::before { content: 'email'; color: #36c; }
+
+/* Emojis are yellow */
+.entities li.EMOJI { background-color: #fc3; }
+.entities li.EMOJI::before { content: 'emoji'; color: #fc3; }
+
+.entities li.EMOTICON { background-color: #fc3; }
+.entities li.EMOTICON::before { content: 'emoticon'; color: #fc3; }
 
 .entities li.location { background-color: #d33; }
 .entities li.location::before { content: 'location'; color: #d33; }
