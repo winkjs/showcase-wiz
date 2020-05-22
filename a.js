@@ -72,7 +72,7 @@ getInfo = function (v) {
   // TODO: Figure out encoding issues
   v = v.replace('#', '%23'); // Hashtags are becoming fragments
   v = v.replace('%', '%25'); // Encode % sign
-  fetch('http://showcase-serverless.herokuapp.com/pos-tagger?sentence='+v)
+  fetch('https://showcase-serverless.herokuapp.com/pos-tagger?sentence='+v)
     .then(function (res) {
       return res.json();
     }).then(function (info) {

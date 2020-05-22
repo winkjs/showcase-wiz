@@ -73,7 +73,7 @@ span.DATE { color: #5c2a9d; }
 span.DATE::after { content: 'date'; color: #5c2a9d; border-color: #5c2a9d; }
 
 span.TIME { color: #5c2a9d; }
-span.TIMe::after { content: 'time'; color: #5c2a9d; border-color: #5c2a9d; }
+span.TIME::after { content: 'time'; color: #5c2a9d; border-color: #5c2a9d; }
 
 span.DURATION { color: #5c2a9d; }
 span.DURATION::after { content: 'duration'; color: #5c2a9d; border-color: #5c2a9d; }
