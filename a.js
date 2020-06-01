@@ -2,17 +2,21 @@ document.addEventListener('DOMContentLoaded', function() {
   var input = document.getElementById('input');
   var output = document.getElementById('output');
 
-  // Limit charactar input
-  input.addEventListener('keypress',function (e) {
-    if ($(this).text().length > 399) {
+  var applyCharacterLimit = function (e) {
+    console.log('eontuh',$(this).text());
+    if ($(this).text().length > 199) {
       e.preventDefault();
-      $(this).text( $(this).text().substr(0,400) );
+      $(this).text( $(this).text().substr(0,200) );
       return false;
     }
-  });
+  }
+
+  // Limit charactar input
+  input.addEventListener('keypress',applyCharacterLimit);
+  input.addEventListener('paste',applyCharacterLimit);
 
   input.addEventListener('keyup', function () {
-    getInfo(input.innerHTML);
+    getInfo(input.innerText);
     return false;
   });
 });
