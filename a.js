@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
   var output = document.getElementById('output');
 
   var applyCharacterLimit = function (e) {
-    console.log('eontuh',$(this).text());
     if ($(this).text().length > 199) {
       e.preventDefault();
       $(this).text( $(this).text().substr(0,200) );
@@ -76,7 +75,17 @@ getInfo = function (v) {
   // TODO: Figure out encoding issues
   v = v.replace('#', '%23'); // Hashtags are becoming fragments
   v = v.replace('%', '%25'); // Encode % sign
-  fetch('https://showcase-serverless.herokuapp.com/pos-tagger?sentence='+v)
+
+  fetch(
+    'https://showcase-serverless.herokuapp.com/pos-tagger',
+    {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify({sentence: v})
+    })
     .then(function (res) {
       return res.json();
     }).then(function (info) {
