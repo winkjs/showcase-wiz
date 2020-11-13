@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
     getInfo(input.innerText);
     return false;
   });
+
+  getInfo(input.innerText);
 });
 
 renderInfo = function (info) {
