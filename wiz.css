@@ -8,7 +8,8 @@
 .surface {
   position: relative;
   width: 100%;
-  height: 300px;
+  min-height: 300px;
+  padding-bottom: 40px;
 }
 
 .surface #input,
@@ -26,6 +27,7 @@
 
 .surface #input {
   opacity: 0.5;
+  position: relative;
 }
 
 .surface #input:focus {

@@ -2,17 +2,12 @@ document.addEventListener('DOMContentLoaded', function() {
   var input = document.getElementById('input');
   var output = document.getElementById('output');
 
-  var applyCharacterLimit = function (e) {
-    if ($(this).text().length > 199) {
-      e.preventDefault();
-      $(this).text( $(this).text().substr(0,200) );
-      return false;
-    }
-  }
-
-  // Limit charactar input
-  input.addEventListener('keypress',applyCharacterLimit);
-  input.addEventListener('paste',applyCharacterLimit);
+  // Remove styling from text
+  input.addEventListener('paste', function (e) {
+    e.preventDefault();
+    var text = e.clipboardData.getData("text/plain");
+    document.execCommand("insertHTML", false, text);
+  });
 
   input.addEventListener('keyup', function () {
     getInfo(input.innerText);
@@ -21,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 renderInfo = function (info) {
-  console.log(info);
   var output = document.getElementById('output');
   var entities = document.getElementById('entities');
   var wordFreq = document.getElementById('word-freq');
@@ -67,15 +61,9 @@ getSentimentEmoji = function (s) {
   if( s < -1 ) return '😢';
   if( s < 0 ) return '☹️';
   if( s === 0 ) return '😶';
-
-
 }
 
 getInfo = function (v) {
-  // TODO: Figure out encoding issues
-  v = v.replace('#', '%23'); // Hashtags are becoming fragments
-  v = v.replace('%', '%25'); // Encode % sign
-
   fetch(
     'https://showcase-serverless.herokuapp.com/pos-tagger',
     {
