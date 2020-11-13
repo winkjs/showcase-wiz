@@ -57,7 +57,7 @@ span.tag::after {
 
 /* Numbers are green */
 span.MONEY { color: #00af89; }
-span.MONEY::after { content: 'date'; color: #00af89; border-color: #00af89; }
+span.MONEY::after { content: 'money'; color: #00af89; border-color: #00af89; }
 
 span.ORDINAL { color: #00af89; }
 span.ORDINAL::after { content: 'ordinal'; color: #00af89; border-color: #00af89; }
