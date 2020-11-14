@@ -62,6 +62,34 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8">
+            <section>
+              <h2>Document Statistics</h2>
+              <dl class="dl-horizontal doc-stats">
+                <div class="col-md-4">
+                  <div class="">
+                    <span id="sentences-stat">0</span>
+                    Sentences
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="">
+                    <span id="words-stat">0</span>
+                    Words
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="">
+                    <span id="tokens-stat">0</span>
+                    Tokens
+                  </div>
+                </div>
+              </dl>
+            </section>
+
+            <br><br><br>
+
             <h2>Sentences & Sentiments</h2>
             <table class="table table-hover">
               <tr>
@@ -82,24 +110,7 @@
             <section>
               <h2>Entities</h2>
               <ul class="entities" id="entities">
-                <li class="person">Sanjaya</li>
-                <li class="org">Wink</li>
-                <li class="location">Noida</li>
               </ul>
-            </section>
-
-            <section>
-              <h2>Document Statistics</h2>
-              <dl class="dl-horizontal doc-stats">
-                <dt id="sentences-stat">3</dt>
-                <dd>Sentences</dd>
-
-                <dt id="words-stat">44</dt>
-                <dd>Words</dd>
-
-                <dt id="tokens-stat">128</dt>
-                <dd>Tokens</dd>
-              </dl>
             </section>
 
             <section>
@@ -110,10 +121,6 @@
                   <th>Frequency</th>
                 </tr>
                 <tbody id="word-freq">
-                  <tr>
-                    <td>Test</td>
-                    <td>42</td>
-                  </tr>
                 </tbody>
               </table>
             </section>

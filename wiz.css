@@ -133,18 +133,16 @@ section {
   width: 100%;
 }
 
-.doc-stats dt {
-  font-size: 30px;
-  width: auto;
-  min-width: 80px;
-
+.doc-stats > div > div {
+  background: #eaecf0;
+  border-radius: 2px;
+  padding: 1rem 2rem;
+  margin-left: -10px;
 }
 
-.doc-stats dd {
-  display: block;
-  margin-left: 80px;
-  padding-left: 10px;
-  padding-top: 15px;
+.doc-stats span {
+  display: inline;
+  font-size: 30px;
 }
 
 .entities {
