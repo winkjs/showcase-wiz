@@ -50,7 +50,7 @@ renderInfo = function (info) {
   sentimentTable.innerHTML = '';
   info.sentiments.forEach(function (s) {
     sentimentTable.innerHTML += '<tr>' +
-      '<td>' + getSentimentEmoji(s.sentiment) + '</td>' +
+      '<td class="sentence-emoji">' + getSentimentEmoji(s.sentiment) + '</td>' +
       '<td class="sentence-text">' + s.sentence + '</td>' +
       '<td>' + s.sentiment + '</td>' +
       '</tr>';

@@ -125,6 +125,10 @@ section {
   margin-bottom: 60px;
 }
 
+.sentence-emoji {
+  font-size: 2rem;
+}
+
 .sentence-text {
   width: 100%;
 }
