@@ -103,6 +103,11 @@ footer .social-icons ul li a img.github {
   margin-top: 13px;
 }
 
+.navbar .navbar-nav > li > a.purple_btn {
+  background: #6C307D;
+  color: #fff;
+}
+
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
